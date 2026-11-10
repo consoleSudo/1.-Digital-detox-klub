@@ -48,6 +48,67 @@
         </div>
       </div>
     </section>
+
+    <section class="stats">
+      <div class="container stats-inner">
+        <div class="stat-item">
+          <span class="stat-number">6</span>
+          <span class="stat-label">izazova</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">7 dana</span>
+          <span class="stat-label">prosječno trajanje</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">0 KM</span>
+          <span class="stat-label">potpuno besplatno</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="kalkulator" class="section calculator-section">
+      <div class="container">
+        <div class="calc-card">
+          <div class="calc-header">
+            <p class="eyebrow">Kalkulator ekrana</p>
+            <h2>Koliko ti zapravo ode na ekran?</h2>
+            <p class="calc-desc">Izračunaj koliko dana u godini i godina života provedeš gledajući u telefon.</p>
+          </div>
+          <div class="calc-grid">
+            <div class="calc-inputs">
+              <div class="form-group">
+                <div class="label-row">
+                  <label for="sati">Sati dnevno na telefonu:</label>
+                  <output id="sati-vrijednost" for="sati">6 h</output>
+                </div>
+                <input type="range" id="sati" min="1" max="12" step="0.5" value="6">
+              </div>
+              <div class="form-group">
+                <label for="godine">Tvoja starost (godine):</label>
+                <input type="number" id="godine" min="10" max="70" value="18">
+              </div>
+            </div>
+            <div class="calc-results">
+              <div class="result-tile">
+                <span class="result-label">Godišnje na ekranu</span>
+                <strong id="rez-dani">91,3 dana</strong>
+                <span class="result-sub">čistog budnog vremena</span>
+              </div>
+              <div class="result-tile">
+                <span class="result-label">Do 75. godine života</span>
+                <strong id="rez-godine">14,3 god.</strong>
+                <span class="result-sub">života na ekranu</span>
+              </div>
+              <div class="result-tile">
+                <span class="result-label">Pročitano knjiga</span>
+                <strong id="rez-knjige">365 knjiga</strong>
+                <span class="result-sub">uz 6 h po knjizi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
