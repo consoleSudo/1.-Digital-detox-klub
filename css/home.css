@@ -27,6 +27,7 @@
   letter-spacing: -0.02em;
   margin: 0 0 20px;
   line-height: 1.1;
+  word-break: break-word;
 }
 
 .hero-desc {
@@ -47,6 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .hero-ring {
@@ -114,6 +116,7 @@
 .calc-header h2 {
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   margin-bottom: 12px;
+  word-break: break-word;
 }
 
 .calc-desc {
@@ -149,6 +152,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 
 .label-row label,
@@ -163,6 +167,7 @@
   font-weight: 700;
   color: var(--accent);
   font-size: 1.15rem;
+  flex-shrink: 0;
 }
 
 input[type="range"] {
@@ -228,6 +233,142 @@ input[type="number"]:focus {
   color: var(--muted);
 }
 
+/* Teaser sekcija izazova */
+.teaser {
+  padding: 0 0 100px;
+}
+
+.teaser-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 36px;
+  gap: 20px;
+}
+
+.teaser-title-wrap h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin: 10px 0 0;
+  word-break: break-word;
+}
+
+.teaser-link-desktop {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap .15s ease;
+  white-space: nowrap;
+}
+
+.teaser-link-desktop:hover {
+  gap: 10px;
+}
+
+.teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.teaser-link-mobile {
+  display: none;
+  margin-top: 32px;
+}
+
+/* Kartice (zajednički stil) */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(77, 240, 180, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: 1.5px solid currentColor;
+}
+
+.badge-lako {
+  color: var(--accent);
+  background: rgba(77, 240, 180, 0.08);
+}
+
+.badge-srednje {
+  color: var(--warm);
+  background: rgba(255, 179, 102, 0.08);
+}
+
+.badge-tesko {
+  color: var(--danger);
+  background: rgba(255, 107, 107, 0.08);
+}
+
+.card-duration {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.card-title {
+  font-size: 1.35rem;
+  margin: 0 0 12px;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+.card-desc {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 24px;
+  flex-grow: 1;
+}
+
+.card-link {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap .15s ease;
+}
+
+.card-link:hover {
+  gap: 10px;
+}
+
+@media (max-width: 960px) {
+  .teaser-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 760px) {
   .hero {
     padding: 60px 0 40px;
@@ -259,7 +400,7 @@ input[type="number"]:focus {
   }
 
   .calc-card {
-    padding: 28px 18px;
+    padding: 24px 16px;
   }
 
   .calc-grid {
@@ -269,5 +410,32 @@ input[type="number"]:focus {
 
   .calc-inputs {
     padding: 20px 16px;
+  }
+
+  .teaser {
+    padding: 0 0 60px;
+  }
+
+  .teaser-link-desktop {
+    display: none;
+  }
+
+  .teaser-link-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .teaser-link-mobile .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .teaser-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 22px;
   }
 }
