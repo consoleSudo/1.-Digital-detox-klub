@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Offline · Početna</title>
+  <meta name="description" content="Offline je školski klub za digitalni detox.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><span class="logo-dot"></span>OFFLINE</a>
+      <button class="nav-toggle" aria-label="Otvori meni" aria-expanded="false">Meni</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Početna</a></li>
+        <li><a href="izazovi.html">Izazovi</a></li>
+        <li><a href="o-nama.html">O nama</a></li>
+        <li><a href="kontakt.html">Prijavi se</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow">Digitalni detox klub</p>
+          <h1>Tvoj život nije <span class="accent">na ekranu.</span></h1>
+          <p class="hero-desc">Offline je školski klub za digitalni detox. Izazovi, navike i zajednica koja te vraća u stvarni svijet.</p>
+          <div class="hero-actions">
+            <a href="izazovi.html" class="btn btn-primary">Prihvati izazov</a>
+            <a href="#kalkulator" class="btn btn-ghost">Izračunaj screen time</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <svg class="hero-ring" viewBox="0 0 320 320" width="320" height="320" aria-label="Statistika: 6h 12m dnevno na telefonu" role="img">
+            <circle cx="160" cy="160" r="120" fill="none" stroke="var(--line)" stroke-width="16" />
+            <circle cx="160" cy="160" r="120" fill="none" stroke="var(--accent)" stroke-width="16" stroke-linecap="round" stroke-dasharray="754" stroke-dashoffset="280" transform="rotate(-90 160 160)" />
+            <circle cx="160" cy="160" r="92" fill="none" stroke="var(--surface-2)" stroke-width="3" stroke-dasharray="4 6" />
+            <text x="160" y="152" text-anchor="middle" fill="var(--text)" font-family="var(--font-head)" font-size="34" font-weight="700">6h 12m</text>
+            <text x="160" y="184" text-anchor="middle" fill="var(--muted)" font-family="var(--font-body)" font-size="14">dnevno na telefonu</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo"><span class="logo-dot"></span>OFFLINE</a>
+      <p>© 2026 Offline klub · Školski projekat, Softversko inženjerstvo</p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
