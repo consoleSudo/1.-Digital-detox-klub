@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Offline · Izazovi</title>
+  <meta name="description" content="Izaberi svoj digitalni detox izazov i vrati kontrolu nad vremenom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/izazovi.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><span class="logo-dot"></span>OFFLINE</a>
+      <button class="nav-toggle" aria-label="Otvori meni" aria-expanded="false">Meni</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="izazovi.html" class="active">Izazovi</a></li>
+        <li><a href="o-nama.html">O nama</a></li>
+        <li><a href="kontakt.html">Prijavi se</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="challenges section">
+      <div class="container">
+        <div class="challenges-header">
+          <p class="eyebrow">Izazovi</p>
+          <h1>Izaberi svoj izazov</h1>
+          <p class="challenges-desc">Kratki, jasni i mjerljivi koraci za povratak pažnje. Izaberi nivo težine i prijavi se.</p>
+        </div>
+
+        <div class="filter-bar">
+          <button class="filter active" data-filter="svi" aria-pressed="true">Svi</button>
+          <button class="filter" data-filter="lako" aria-pressed="false">Lako</button>
+          <button class="filter" data-filter="srednje" aria-pressed="false">Srednje</button>
+          <button class="filter" data-filter="tesko" aria-pressed="false">Teško</button>
+        </div>
+
+        <div class="challenges-grid">
+          <article class="card" data-tezina="lako" data-slug="notifikacije-off">
+            <div class="card-top">
+              <span class="badge badge-lako">Lako</span>
+              <span class="card-duration">3 dana</span>
+            </div>
+            <h3 class="card-title">Notifikacije OFF</h3>
+            <p class="card-desc">Isključi sve notifikacije osim poziva i poruka. Telefon više ne odlučuje kada si ti na redu.</p>
+            <a href="kontakt.html?izazov=notifikacije-off" class="card-link">Prihvati →</a>
+          </article>
+
+          <article class="card" data-tezina="lako" data-slug="jutro-bez-telefona">
+            <div class="card-top">
+              <span class="badge badge-lako">Lako</span>
+              <span class="card-duration">7 dana</span>
+            </div>
+            <h3 class="card-title">Jutro bez telefona</h3>
+            <p class="card-desc">Prvih 60 minuta nakon buđenja bez ekrana. Doručak, voda, svjetlo, pa tek onda svijet.</p>
+            <a href="kontakt.html?izazov=jutro-bez-telefona" class="card-link">Prihvati →</a>
+          </article>
+
+          <article class="card" data-tezina="srednje" data-slug="bez-tiktoka">
+            <div class="card-top">
+              <span class="badge badge-srednje">Srednje</span>
+              <span class="card-duration">7 dana</span>
+            </div>
+            <h3 class="card-title">Bez TikToka</h3>
+            <p class="card-desc">Obriši TikTok (ili Reels i Shorts) na sedam dana i zapiši šta si radio umjesto toga.</p>
+            <a href="kontakt.html?izazov=bez-tiktoka" class="card-link">Prihvati →</a>
+          </article>
+
+          <article class="card" data-tezina="srednje" data-slug="telefon-van-sobe">
+            <div class="card-top">
+              <span class="badge badge-srednje">Srednje</span>
+              <span class="card-duration">14 dana</span>
+            </div>
+            <h3 class="card-title">Telefon van sobe</h3>
+            <p class="card-desc">Telefon se puni u hodniku. Kupi budilicu i vrati san.</p>
+            <a href="kontakt.html?izazov=telefon-van-sobe" class="card-link">Prihvati →</a>
+          </article>
+
+          <article class="card" data-tezina="srednje" data-slug="skola-bez-scrollanja">
+            <div class="card-top">
+              <span class="badge badge-srednje">Srednje</span>
+              <span class="card-duration">5 dana</span>
+            </div>
+            <h3 class="card-title">Škola bez scrollanja</h3>
+            <p class="card-desc">Na školskim odmorima telefon ostaje u torbi. Razgovaraj, igraj, gledaj oko sebe.</p>
+            <a href="kontakt.html?izazov=skola-bez-scrollanja" class="card-link">Prihvati →</a>
+          </article>
+
+          <article class="card" data-tezina="tesko" data-slug="offline-vikend">
+            <div class="card-top">
+              <span class="badge badge-tesko">Teško</span>
+              <span class="card-duration">48 sati</span>
+            </div>
+            <h3 class="card-title">Offline vikend</h3>
+            <p class="card-desc">Od petka uvečer do nedjelje uvečer bez društvenih mreža. Samo pozivi za hitne stvari.</p>
+            <a href="kontakt.html?izazov=offline-vikend" class="card-link">Prihvati →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo"><span class="logo-dot"></span>OFFLINE</a>
+      <p>© 2026 Offline klub · Školski projekat, Softversko inženjerstvo</p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
