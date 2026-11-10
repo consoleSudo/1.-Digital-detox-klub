@@ -1,0 +1,175 @@
+/* Header sekcija izazova */
+.challenges-header {
+  margin-bottom: 36px;
+  max-width: 640px;
+}
+
+.challenges-header h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  margin: 10px 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.challenges-desc {
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Filter traka */
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.filter {
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+
+.filter:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.filter.active {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
+
+/* Mreža kartica */
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Pojedinačna kartica */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(77, 240, 180, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Badge težine (outline pill po mockupu) */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: 1.5px solid currentColor;
+}
+
+.badge-lako {
+  color: var(--accent);
+  background: rgba(77, 240, 180, 0.08);
+}
+
+.badge-srednje {
+  color: var(--warm);
+  background: rgba(255, 179, 102, 0.08);
+}
+
+.badge-tesko {
+  color: var(--danger);
+  background: rgba(255, 107, 107, 0.08);
+}
+
+.card-duration {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.card-title {
+  font-size: 1.35rem;
+  margin: 0 0 12px;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+.card-desc {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 24px;
+  flex-grow: 1;
+}
+
+.card-link {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap .15s ease;
+}
+
+.card-link:hover {
+  gap: 10px;
+}
+
+/* Skrivanje kartica pri filtriranju */
+.card[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 960px) {
+  .challenges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .challenges-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .filter-bar {
+    margin-bottom: 28px;
+    gap: 8px;
+  }
+
+  .filter {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .card {
+    padding: 22px;
+  }
+}
