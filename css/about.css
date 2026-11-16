@@ -1,0 +1,148 @@
+/* Sekcija Misija */
+#misija h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  max-width: 800px;
+  margin: 12px 0 24px;
+}
+
+#misija p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 780px;
+  margin: 0 0 18px;
+}
+
+/* Sekcija Vrijednosti */
+.values h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  margin: 12px 0 0;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.value-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px 26px;
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.value-icon {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--accent);
+  background: var(--surface-2);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line);
+}
+
+.value-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.value-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Sekcija Clanovi */
+#clanovi h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  margin: 12px 0 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.member {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.member:hover {
+  transform: translateY(-4px);
+  border-color: rgba(77, 240, 180, 0.4);
+}
+
+.member-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  flex-shrink: 0;
+}
+
+.member-info h3 {
+  font-size: 1.3rem;
+  margin: 0 0 4px;
+}
+
+.member-role {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.member-bio {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responzivnost */
+@media (max-width: 760px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 28px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 28px;
+  }
+
+  .member {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px 20px;
+  }
+}
