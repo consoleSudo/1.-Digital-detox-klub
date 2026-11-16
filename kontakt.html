@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Offline · Prijavi se</title>
+  <meta name="description" content="Prijavi se na izazov i pridruži se Offline klubu za digitalni detox.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><span class="logo-dot"></span>OFFLINE</a>
+      <button class="nav-toggle" aria-label="Otvori meni" aria-expanded="false">Meni</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="izazovi.html">Izazovi</a></li>
+        <li><a href="o-nama.html">O nama</a></li>
+        <li><a href="kontakt.html" class="active">Prijavi se</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container contact-container">
+      <div class="contact-header">
+        <span class="eyebrow">Pridruži se</span>
+        <h1>Prihvati <span class="accent">izazov</span></h1>
+        <p>Ispuni jednostavnu formu i napravi prvi korak prema svjesnijem korištenju tehnologije. Bez komplikacija.</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <form id="forma" novalidate class="contact-card">
+          <div class="form-group">
+            <label for="ime">Ime i prezime</label>
+            <input type="text" id="ime" name="ime" placeholder="npr. Ana Babić" autocomplete="name">
+            <p class="greska" id="greska-ime" aria-live="polite"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email adresa</label>
+            <input type="email" id="email" name="email" placeholder="tvoj.email@skola.ba" autocomplete="email">
+            <p class="greska" id="greska-email" aria-live="polite"></p>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="razred">Razred</label>
+              <select id="razred" name="razred">
+                <option value="">Izaberi razred...</option>
+                <option value="1">1. razred</option>
+                <option value="2">2. razred</option>
+                <option value="3">3. razred</option>
+                <option value="4">4. razred</option>
+              </select>
+              <p class="greska" id="greska-razred" aria-live="polite"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="izazov">Izazov</label>
+              <select id="izazov" name="izazov">
+                <option value="">Izaberi izazov...</option>
+                <option value="notifikacije-off">Notifikacije OFF (3 dana)</option>
+                <option value="jutro-bez-telefona">Jutro bez telefona (7 dana)</option>
+                <option value="bez-tiktoka">Bez TikToka (7 dana)</option>
+                <option value="telefon-van-sobe">Telefon van sobe (14 dana)</option>
+                <option value="skola-bez-scrollanja">Škola bez scrollanja (5 dana)</option>
+                <option value="offline-vikend">Offline vikend (48 sati)</option>
+              </select>
+              <p class="greska" id="greska-izazov" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="label-with-counter">
+              <label for="poruka">Poruka (opcionalno)</label>
+              <span id="brojac" class="brojac">0 / 300</span>
+            </div>
+            <textarea id="poruka" name="poruka" rows="4" placeholder="Zašto želiš učestvovati ili šta ti predstavlja najveći izazov?"></textarea>
+            <p class="greska" id="greska-poruka" aria-live="polite"></p>
+          </div>
+
+          <div class="form-group form-checkbox">
+            <label class="checkbox-container">
+              <input type="checkbox" id="pravila" name="pravila">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">Prihvatam pravila kluba i izazova</span>
+            </label>
+            <p class="greska" id="greska-pravila" aria-live="polite"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit">Pošalji prijavu</button>
+        </form>
+
+        <div id="uspjeh" class="contact-card uspjeh-card" hidden>
+          <div class="uspjeh-icon">✓</div>
+          <h2>Prijava je uspješna!</h2>
+          <p id="uspjeh-poruka" class="uspjeh-poruka"></p>
+          <a href="izazovi.html" class="btn btn-ghost">Pogledaj ostale izazove</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo"><span class="logo-dot"></span>OFFLINE</a>
+      <p>© 2026 Offline klub · Školski projekat, Softversko inženjerstvo</p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
