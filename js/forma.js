@@ -130,3 +130,12 @@ if (forma) {
     }
   });
 }
+// Predodabir izazova iz URL parametra (?izazov=<slug>)
+const urlParams = new URLSearchParams(window.location.search);
+const izazovParam = urlParams.get('izazov');
+if (izazovParam && selectIzazov) {
+  const odgovarajucaOpcija = selectIzazov.querySelector(`option[value="${izazovParam}"]`);
+  if (odgovarajucaOpcija) {
+    selectIzazov.value = izazovParam;
+  }
+}
