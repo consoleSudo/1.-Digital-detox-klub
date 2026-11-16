@@ -8,6 +8,7 @@
 .contact-header h1 {
   font-size: clamp(2rem, 4vw, 3rem);
   margin: 12px 0 16px;
+  overflow-wrap: break-word;
 }
 
 .contact-header p {
@@ -48,6 +49,13 @@ label {
   font-weight: 600;
   margin-bottom: 8px;
   color: var(--text);
+  display: flex;
+  align-items: center;
+}
+
+.obavezno {
+  color: var(--accent);
+  margin-left: 4px;
 }
 
 input[type="text"],
@@ -81,21 +89,30 @@ textarea {
   line-height: 1.5;
 }
 
-/* Fokus stanje - mint obrub */
+/* Fokus stanja - pristupačnost i vidljivost */
 input[type="text"]:focus,
 input[type="email"]:focus,
 select:focus,
 textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(77, 240, 180, 0.15);
+  box-shadow: 0 0 0 3px rgba(77, 240, 180, 0.2);
+}
+
+input[type="text"]:focus-visible,
+input[type="email"]:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }
 
 /* Neispravno polje - crveni obrub */
 input.invalid,
 select.invalid,
-textarea.invalid {
+textarea.invalid,
+input[type="checkbox"].invalid {
   border-color: var(--danger) !important;
-  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.15);
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
 }
 
 /* Poruke o greskama */
@@ -149,11 +166,21 @@ textarea.invalid {
   border-radius: 4px;
 }
 
+.checkbox-container input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 /* Dugme za slanje */
 .btn-submit {
   width: 100%;
   margin-top: 12px;
   text-align: center;
+}
+
+.btn-submit:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 /* Panel uspjeha */
@@ -189,18 +216,46 @@ textarea.invalid {
   margin-bottom: 28px;
 }
 
-/* Responzivnost */
+/* Responzivnost za mobilne uređaje (do 760px i 360px) */
 @media (max-width: 760px) {
   .contact-wrapper {
     margin-top: 28px;
   }
 
   .contact-card {
-    padding: 28px 20px;
+    padding: 30px 22px;
   }
 
   .form-row {
     grid-template-columns: 1fr;
     gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 24px 16px;
+    border-radius: 12px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+
+  .checkbox-container {
+    font-size: 0.88rem;
+    align-items: flex-start;
+  }
+
+  .checkbox-container input[type="checkbox"] {
+    margin-top: 2px;
+  }
+
+  .uspjeh-card {
+    padding: 32px 16px;
   }
 }

@@ -14,18 +14,18 @@
 <body>
   <header class="nav">
     <div class="container nav-inner">
-      <a href="index.html" class="logo"><span class="logo-dot"></span>OFFLINE</a>
+      <a href="index.html" class="logo"><span class="logo-dot" aria-hidden="true"></span>OFFLINE</a>
       <button class="nav-toggle" aria-label="Otvori meni" aria-expanded="false">Meni</button>
       <ul class="nav-links">
         <li><a href="index.html">Početna</a></li>
         <li><a href="izazovi.html">Izazovi</a></li>
         <li><a href="o-nama.html">O nama</a></li>
-        <li><a href="kontakt.html" class="active">Prijavi se</a></li>
+        <li><a href="kontakt.html" class="active" aria-current="page">Prijavi se</a></li>
       </ul>
     </div>
   </header>
 
-  <main class="section">
+  <main id="glavni-sadrzaj" class="section">
     <div class="container contact-container">
       <div class="contact-header">
         <span class="eyebrow">Pridruži se</span>
@@ -34,23 +34,23 @@
       </div>
 
       <div class="contact-wrapper">
-        <form id="forma" novalidate class="contact-card">
+        <form id="forma" novalidate class="contact-card" aria-label="Forma za prijavu na izazov">
           <div class="form-group">
-            <label for="ime">Ime i prezime</label>
-            <input type="text" id="ime" name="ime" placeholder="npr. Ana Babić" autocomplete="name">
+            <label for="ime">Ime i prezime <span class="obavezno" aria-hidden="true">*</span></label>
+            <input type="text" id="ime" name="ime" placeholder="npr. Ana Babić" autocomplete="name" aria-required="true" aria-describedby="greska-ime">
             <p class="greska" id="greska-ime" aria-live="polite"></p>
           </div>
 
           <div class="form-group">
-            <label for="email">Email adresa</label>
-            <input type="email" id="email" name="email" placeholder="tvoj.email@skola.ba" autocomplete="email">
+            <label for="email">Email adresa <span class="obavezno" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" placeholder="tvoj.email@skola.ba" autocomplete="email" aria-required="true" aria-describedby="greska-email">
             <p class="greska" id="greska-email" aria-live="polite"></p>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="razred">Razred</label>
-              <select id="razred" name="razred">
+              <label for="razred">Razred <span class="obavezno" aria-hidden="true">*</span></label>
+              <select id="razred" name="razred" aria-required="true" aria-describedby="greska-razred">
                 <option value="">Izaberi razred...</option>
                 <option value="1">1. razred</option>
                 <option value="2">2. razred</option>
@@ -61,8 +61,8 @@
             </div>
 
             <div class="form-group">
-              <label for="izazov">Izazov</label>
-              <select id="izazov" name="izazov">
+              <label for="izazov">Izazov <span class="obavezno" aria-hidden="true">*</span></label>
+              <select id="izazov" name="izazov" aria-required="true" aria-describedby="greska-izazov">
                 <option value="">Izaberi izazov...</option>
                 <option value="notifikacije-off">Notifikacije OFF (3 dana)</option>
                 <option value="jutro-bez-telefona">Jutro bez telefona (7 dana)</option>
@@ -78,17 +78,17 @@
           <div class="form-group">
             <div class="label-with-counter">
               <label for="poruka">Poruka (opcionalno)</label>
-              <span id="brojac" class="brojac">0 / 300</span>
+              <span id="brojac" class="brojac" aria-live="polite">0 / 300</span>
             </div>
-            <textarea id="poruka" name="poruka" rows="4" placeholder="Zašto želiš učestvovati ili šta ti predstavlja najveći izazov?"></textarea>
+            <textarea id="poruka" name="poruka" rows="4" maxlength="300" placeholder="Zašto želiš učestvovati ili šta ti predstavlja najveći izazov?" aria-describedby="greska-poruka brojac"></textarea>
             <p class="greska" id="greska-poruka" aria-live="polite"></p>
           </div>
 
           <div class="form-group form-checkbox">
-            <label class="checkbox-container">
-              <input type="checkbox" id="pravila" name="pravila">
-              <span class="checkbox-custom"></span>
-              <span class="checkbox-label">Prihvatam pravila kluba i izazova</span>
+            <label class="checkbox-container" for="pravila">
+              <input type="checkbox" id="pravila" name="pravila" aria-required="true" aria-describedby="greska-pravila">
+              <span class="checkbox-custom" aria-hidden="true"></span>
+              <span class="checkbox-label">Prihvatam pravila kluba i izazova <span class="obavezno" aria-hidden="true">*</span></span>
             </label>
             <p class="greska" id="greska-pravila" aria-live="polite"></p>
           </div>
@@ -96,8 +96,8 @@
           <button type="submit" class="btn btn-primary btn-submit">Pošalji prijavu</button>
         </form>
 
-        <div id="uspjeh" class="contact-card uspjeh-card" hidden>
-          <div class="uspjeh-icon">✓</div>
+        <div id="uspjeh" class="contact-card uspjeh-card" role="status" aria-live="polite" hidden>
+          <div class="uspjeh-icon" aria-hidden="true">✓</div>
           <h2>Prijava je uspješna!</h2>
           <p id="uspjeh-poruka" class="uspjeh-poruka"></p>
           <a href="izazovi.html" class="btn btn-ghost">Pogledaj ostale izazove</a>
@@ -108,7 +108,7 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <a href="index.html" class="logo"><span class="logo-dot"></span>OFFLINE</a>
+      <a href="index.html" class="logo"><span class="logo-dot" aria-hidden="true"></span>OFFLINE</a>
       <p>© 2026 Offline klub · Školski projekat, Softversko inženjerstvo</p>
     </div>
   </footer>

@@ -14,18 +14,18 @@
 <body>
   <header class="nav">
     <div class="container nav-inner">
-      <a href="index.html" class="logo"><span class="logo-dot"></span>OFFLINE</a>
+      <a href="index.html" class="logo"><span class="logo-dot" aria-hidden="true"></span>OFFLINE</a>
       <button class="nav-toggle" aria-label="Otvori meni" aria-expanded="false">Meni</button>
       <ul class="nav-links">
         <li><a href="index.html">Početna</a></li>
         <li><a href="izazovi.html">Izazovi</a></li>
-        <li><a href="o-nama.html" class="active">O nama</a></li>
+        <li><a href="o-nama.html" class="active" aria-current="page">O nama</a></li>
         <li><a href="kontakt.html">Prijavi se</a></li>
       </ul>
     </div>
   </header>
 
-  <main>
+  <main id="glavni-sadrzaj">
     <section id="misija" class="section">
       <div class="container">
         <span class="eyebrow">O nama</span>
@@ -41,23 +41,24 @@
         <h2>Vrijednosti na kojima gradimo klub</h2>
         <div class="values-grid">
           <article class="value-card">
-            <div class="value-icon">01</div>
+            <div class="value-icon" aria-hidden="true">01</div>
             <h3>Svjesno korištenje</h3>
             <p>Telefon je alat, ne refleks. Učimo kako donositi svjesne odluke o tome kada i zašto otključavamo ekran.</p>
           </article>
           <article class="value-card">
-            <div class="value-icon">02</div>
+            <div class="value-icon" aria-hidden="true">02</div>
             <h3>Zajednica</h3>
             <p>Lakše je kad izazov prolazi cijeli razred. Dijelimo iskustva, prepreke i male pobjede bez osuđivanja.</p>
           </article>
           <article class="value-card">
-            <div class="value-icon">03</div>
+            <div class="value-icon" aria-hidden="true">03</div>
             <h3>Mali koraci</h3>
             <p>Tri dana bez notifikacija vrijede više od obećanja o mjesec dana. Održive promjene počinju jednostavnim navikama.</p>
           </article>
         </div>
       </div>
     </section>
+
     <section id="clanovi" class="section">
       <div class="container">
         <span class="eyebrow">Tim</span>
@@ -82,44 +83,45 @@
         </div>
       </div>
     </section>
+
     <section id="faq" class="section">
       <div class="container">
         <span class="eyebrow">Pitanja i odgovori</span>
         <h2>Često postavljana pitanja</h2>
         <div class="faq-list">
           <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1" id="faq-q-1">
               <span>Šta je digitalni detox?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-a" hidden>
+            <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1" hidden>
               <p>Svjesna pauza od ekrana i društvenih mreža, kratka i mjerljiva.</p>
             </div>
           </div>
           <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2" id="faq-q-2">
               <span>Moram li ukinuti mobitel?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-a" hidden>
+            <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2" hidden>
               <p>Ne. Svaki izazov ima tačno određeno pravilo i trajanje.</p>
             </div>
           </div>
           <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3" id="faq-q-3">
               <span>Koliko košta učlanjenje?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-a" hidden>
+            <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3" hidden>
               <p>Ništa. Klub je besplatan.</p>
             </div>
           </div>
           <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4" id="faq-q-4">
               <span>Kako da se prijavim?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-a" hidden>
+            <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" hidden>
               <p>Kroz formu na stranici "Prijavi se".</p>
             </div>
           </div>
@@ -130,7 +132,7 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <a href="index.html" class="logo"><span class="logo-dot"></span>OFFLINE</a>
+      <a href="index.html" class="logo"><span class="logo-dot" aria-hidden="true"></span>OFFLINE</a>
       <p>© 2026 Offline klub · Školski projekat, Softversko inženjerstvo</p>
     </div>
   </footer>
